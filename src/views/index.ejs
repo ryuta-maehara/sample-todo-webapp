@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo一覧</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>ToDo一覧</h1>
+  <a href="/new">新規作成</a>
+  <table border="1">
+    <tr><th>タイトル</th><th>内容</th><th>期限</th><th>優先度</th><th>操作</th></tr>
+    <% todos.forEach(todo => { %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.content %></td>
+        <td><%= todo.due_date %></td>
+        <td><%= todo.priority %></td>
+        <td>
+          <a href="/edit/<%= todo.id %>">編集</a>
+          <form action="/delete/<%= todo.id %>" method="post" style="display:inline">
+            <button type="submit">削除</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

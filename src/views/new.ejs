@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo新規作成</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>新規ToDo作成</h1>
+  <form action="/create" method="post">
+    <label>タイトル: <input type="text" name="title" required></label><br>
+    <label>内容: <input type="text" name="content"></label><br>
+    <label>期限: <input type="date" name="due_date"></label><br>
+    <label>優先度: <input type="number" name="priority" min="1" max="5"></label><br>
+    <button type="submit">作成</button>
+  </form>
+  <a href="/">戻る</a>
+</body>
+</html>
