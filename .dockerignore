@@ -1,0 +1,10 @@
+# コンテナ化時に除外するファイル・ディレクトリ
+# 例: node_modules, テスト、ローカルデータなど
+node_modules
+npm-debug.log
+data/
+src/tests/
+.git
+.DS_Store
+.env
+*.log
